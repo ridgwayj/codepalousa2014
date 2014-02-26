@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Weather Explorer</string>
+    <string name="action_settings">Settings</string>
+    <string name="zip_code">Zip Code</string>
+    <string name="temp">Temp</string>
+    <string name="degrees_c">ºC</string>
+    <string name="degrees_f">ºF</string>
+    <string name="location_desc">Location</string>
+    <string name="location_zip">Location Zip</string>
+    <string name="weather">Weather</string>
+    <string name="feels_like">Feels Like\u0020</string>
+    <string name="observation_time">Observation Time</string>
+    <string name="image_description">Current Weather</string>
+    <string name="get_weather">Get Weather</string>
+    <string name="zip_hint">00000</string>
+    <string name="temp_placeholder">000ºF</string>
+    <string name="wind_label">Winds\u0020</string>
+    <string name="wind">Wind Direction/Speed</string>
+    <string name="relative_humidity">Humidity\u0020</string>
+    <string name="barometric_pressure">Pressure\u0020</string>
+    <string name="dewpoint">Dewpoint\u0020</string>
+    <string name="visibility">Visibility\u0020</string>
+    <string name="credits">Weather Data provided by WeatherUnderground®</string>
+    
+</resources>

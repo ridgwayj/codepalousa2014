@@ -1,0 +1,254 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <!-- Zip Input -->
+    <EditText
+        android:id="@+id/editTextZip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="16dp"
+        android:inputType="number"
+        android:hint="@string/zip_hint"
+        android:maxLength="5"
+        android:textSize="20sp"
+        android:textStyle="bold">
+        <requestFocus />
+    </EditText>
+    
+    <!-- Zip Label -->
+     <TextView
+        android:id="@+id/textViewZip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="6dp"
+        android:labelFor="@+id/editTextZip"
+        android:text="@string/zip_code"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+    <Button
+        android:id="@+id/buttonGetWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignTop="@+id/editTextZip"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="6dp"
+        android:text="@string/get_weather" 
+        android:onClick="getWeather"/>
+
+	
+	<!-- Location -->
+    <TextView
+        android:id="@+id/textViewLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextZip"
+        android:layout_alignLeft="@+id/editTextZip"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="6dp"
+        android:text="@string/location_desc"
+        android:textSize="18sp"
+        android:textStyle="italic" />
+
+     
+     <!-- Temperature Display -->
+     <TextView
+        android:id="@+id/textViewTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/editTextZip"
+        android:layout_below="@+id/editTextZip"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="12dp"
+        android:text="@string/temp_placeholder"
+        android:textStyle="bold"
+        android:textSize="32sp" />
+
+
+     
+    <!-- Weather -->
+    <TextView
+        android:id="@+id/textViewWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@+id/textViewTemp"
+        android:layout_alignLeft="@+id/textViewLocation"
+        android:layout_marginTop="6dp"
+        android:text="@string/weather"
+        android:textSize="14sp" />
+
+
+    <!-- Feels Like -->
+    <TextView
+        android:id="@+id/textViewFeelsLikeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@+id/textViewWeather"
+        android:layout_alignLeft="@+id/textViewLocation"
+        android:text="@string/feels_like"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textViewFeelsLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/textViewFeelsLikeLabel"
+        android:layout_alignBottom="@+id/textViewFeelsLikeLabel"
+        android:textSize="14sp" />
+    
+    <!-- Wind -->
+    <TextView
+        android:id="@+id/textViewWindsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@+id/textViewFeelsLikeLabel"
+        android:layout_alignLeft="@+id/textViewLocation"
+        android:text="@string/wind_label"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textViewWinds"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_toRightOf="@+id/textViewWindsLabel"
+        android:layout_alignBottom="@+id/textViewWindsLabel"
+        android:text="@string/wind"
+        android:textSize="14sp" />
+
+    <!-- Relative Humidity -->
+    <TextView
+        android:id="@+id/textViewRelativeHumidityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@+id/textViewWindsLabel"
+        android:layout_alignLeft="@+id/textViewLocation"
+        android:text="@string/relative_humidity"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textViewRelativeHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/textViewRelativeHumidityLabel"
+        android:layout_alignBottom="@+id/textViewRelativeHumidityLabel"
+        android:textSize="14sp" />
+    
+    <!-- Barometric Pressure -->
+    <TextView
+        android:id="@+id/textViewBarometricPressureLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@+id/textViewRelativeHumidityLabel"
+        android:layout_alignLeft="@+id/textViewLocation"
+        android:text="@string/barometric_pressure"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textViewBarometricPressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/textViewBarometricPressureLabel"
+        android:layout_alignBottom="@+id/textViewBarometricPressureLabel"
+        android:textSize="14sp" />
+    
+    <!-- Dewpoint -->
+    <TextView
+        android:id="@+id/textViewDewpointLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@+id/textViewBarometricPressureLabel"
+        android:layout_alignLeft="@+id/textViewLocation"
+        android:text="@string/dewpoint"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textViewDewpoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/textViewDewpointLabel"
+        android:layout_alignBottom="@+id/textViewDewpointLabel"
+        android:textSize="14sp" />
+    
+    <!-- Visibility -->
+    <TextView
+        android:id="@+id/textViewVisibilityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@+id/textViewDewpointLabel"
+        android:layout_alignLeft="@+id/textViewLocation"
+        android:text="@string/visibility"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textViewVisibility"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/textViewVisibilityLabel"
+        android:layout_alignBottom="@+id/textViewVisibilityLabel"
+        android:textSize="14sp" />
+    
+    
+    <!-- Observation Time -->
+    <TextView
+        android:id="@+id/textViewObservationTime"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@+id/textViewVisibility"
+        android:layout_alignLeft="@+id/textViewLocation"
+        android:layout_marginTop="4dp"
+        android:text="@string/observation_time"
+        android:textStyle="italic"
+        android:textSize="12sp" />
+	
+  	<!-- Weather Icon -->
+	<ImageView
+	    android:id="@+id/imageViewWeatherIcon"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+	    android:layout_alignBottom="@+id/textViewTemp"
+	 	android:layout_toRightOf="@+id/textViewTemp"
+	 	android:layout_marginStart="16dp"
+	 	android:layout_marginBottom="8dp"
+		android:scaleType="centerInside" 
+		android:scaleX="1.6"
+		android:scaleY="1.6"
+	    android:contentDescription="@string/weather" /> 
+	 	
+	<!-- Credits Image -->
+    <ImageView 
+	    android:id="@+id/imageViewCreditsLogo"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_marginStart="16dp"
+	    android:layout_marginEnd="16dp"
+	    android:layout_marginBottom="10dp"
+	    android:scaleType="centerInside"
+	    android:contentDescription="@string/credits"
+	    android:src="@drawable/wunderground_logo_blue_horz"/>
+    	
+    <!-- Credits tag -->
+    <TextView
+        android:id="@+id/textViewCreditsTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageViewCreditsLogo"
+        android:layout_centerHorizontal="true"
+        android:text="this is a placeholder"
+        android:textStyle="italic"
+        android:textSize="10sp" />
+    	
+</RelativeLayout>
